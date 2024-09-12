@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Wordpress"
 include(":app")
- 
+include(":app:apppage")
