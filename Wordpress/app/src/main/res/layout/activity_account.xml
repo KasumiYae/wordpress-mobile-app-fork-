@@ -2,15 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/account"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@android:color/white"
-    tools:context=".MainActivity"
+    tools:context=".AccountActivity"
     android:padding="16dp">
 
-    <!-- Ảnh hồ sơ và thông tin người dùng -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,15 +17,14 @@
         android:gravity="center_vertical"
         android:paddingBottom="16dp">
 
-        <!-- Ảnh đại diện -->
         <ImageView
             android:id="@+id/avatar"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_avatar"
             android:contentDescription="User Avatar" />
 
-        <!-- Thông tin tên và username -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -36,7 +34,7 @@
                 android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Khiem Pham"
+                android:text="Alexander the Great"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -44,25 +42,24 @@
                 android:id="@+id/username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@phamduckhiem03"
+                android:text="\@Alexandercute123"
                 android:textSize="14sp"
                 android:textColor="#888888" />
         </LinearLayout>
     </LinearLayout>
 
-    <!-- Đường phân cách -->
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#E0E0E0" />
 
-    <!-- Các mục tùy chọn -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Mục "Hồ sơ của tôi" -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -83,11 +80,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="Hồ sơ của tôi"
+                android:text="My Profile"
                 android:textSize="16sp" />
         </LinearLayout>
 
-        <!-- Mục "Cài đặt tài khoản" -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -108,11 +105,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="Cài đặt tài khoản"
+                android:text="Account Settings"
                 android:textSize="16sp" />
         </LinearLayout>
 
-        <!-- Mục "Cài đặt ứng dụng" -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -133,11 +130,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="Cài đặt ứng dụng"
+                android:text="App Settings"
                 android:textSize="16sp" />
         </LinearLayout>
 
-        <!-- Mục "Help" -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -162,7 +159,7 @@
                 android:textSize="16sp" />
         </LinearLayout>
 
-        <!-- Mục "Giới thiệu WordPress cho bạn bè" -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -183,11 +180,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="Giới thiệu WordPress cho bạn bè"
+                android:text="Refer WordPress to Friends"
                 android:textSize="16sp" />
         </LinearLayout>
 
-        <!-- Mục "Về WordPress" -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -208,11 +205,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="Về WordPress"
+                android:text="About WordPress"
                 android:textSize="16sp" />
         </LinearLayout>
 
-        <!-- Mục "Đăng xuất tài khoản" -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -233,12 +230,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="Đăng xuất tài khoản"
+                android:text="Log Out of Account"
                 android:textSize="16sp" />
         </LinearLayout>
     </LinearLayout>
 
-    <!-- Thông tin Gravatar ở cuối -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -246,13 +243,11 @@
         android:gravity="center"
         android:paddingTop="16dp">
 
-        <!-- Logo Gravatar -->
         <ImageView
             android:id="@+id/gravatar_logo"
             android:layout_width="40dp"
             android:layout_height="40dp" />
 
-        <!-- Thông tin Gravatar -->
         <TextView
             android:id="@+id/gravatar_info"
             android:layout_width="wrap_content"

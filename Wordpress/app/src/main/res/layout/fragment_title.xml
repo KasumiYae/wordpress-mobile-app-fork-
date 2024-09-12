@@ -12,7 +12,6 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Title Section -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -22,7 +21,7 @@
                 android:id="@+id/title_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tiêu đề"
+                android:text="TITLE"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -30,11 +29,10 @@
                 android:id="@+id/title_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nhập tiêu đề"
+                android:hint="Enter Title"
                 android:inputType="text" />
         </LinearLayout>
 
-        <!-- Blog Link Section -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -43,7 +41,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Liên kết" />
+                android:text="Link" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -51,7 +49,6 @@
                 android:text="https://abcxyz.wordpress.com" />
         </LinearLayout>
 
-        <!-- Category Section -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -60,7 +57,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Chuyên mục mặc định" />
+                android:text="Default Category" />
 
             <Spinner
                 android:id="@+id/category_spinner"
@@ -68,7 +65,6 @@
                 android:layout_height="wrap_content" />
         </LinearLayout>
 
-        <!-- Text Formatting Section -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -77,7 +73,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Kiểu văn bản mặc định" />
+                android:text="Default Post Type" />
 
             <Spinner
                 android:id="@+id/text_format_spinner"
@@ -85,7 +81,6 @@
                 android:layout_height="wrap_content" />
         </LinearLayout>
 
-        <!-- Date and Time Section -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -94,18 +89,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Định dạng ngày" />
+                android:text="Date Format" />
 
             <TextView
                 android:id="@+id/date_display"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Hôm nay" />
+                android:text="Today" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Định dạng thời gian" />
+                android:text="Time Format" />
 
             <TextView
                 android:id="@+id/time_display"
@@ -114,7 +109,6 @@
                 android:text="23:59" />
         </LinearLayout>
 
-        <!-- Publish Timing Section -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -123,7 +117,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tự bật đầu vào" />
+                android:text="Auto Start Input" />
 
             <Spinner
                 android:id="@+id/toggle_input_spinner"
@@ -131,7 +125,6 @@
                 android:layout_height="wrap_content" />
         </LinearLayout>
 
-        <!-- Comments Section -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -140,13 +133,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bình luận" />
+                android:text="Comment" />
 
             <Switch
                 android:id="@+id/allow_comments_switch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cho phép bình luận"
+                android:text=" Allow Comments"
                 android:checked="true"
                 tools:ignore="UseSwitchCompatOrMaterialXml" />
 
@@ -154,7 +147,7 @@
                 android:id="@+id/allow_pingbacks_switch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cho phép phản hồi"
+                android:text="Allow Respond"
                 android:checked="true"
                 tools:ignore="UseSwitchCompatOrMaterialXml" />
 
@@ -162,12 +155,12 @@
                 android:id="@+id/allow_repost_switch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cho phép đăng lại"
+                android:text="Allow Reposted"
                 android:checked="true"
                 tools:ignore="UseSwitchCompatOrMaterialXml" />
         </LinearLayout>
 
-        <!-- Additional Settings Section -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -176,13 +169,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Xóa blog" />
+                android:text="Delete Blog" />
 
             <Button
                 android:id="@+id/delete_blog_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Xóa blog" />
+                android:text="Delete Blog" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
