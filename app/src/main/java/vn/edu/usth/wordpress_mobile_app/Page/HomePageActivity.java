@@ -1,29 +1,26 @@
 package vn.edu.usth.wordpress_mobile_app.Page;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageButton;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import vn.edu.usth.wordpress_mobile_app.R;
 
-
 public class HomePageActivity extends AppCompatActivity {
-    private ImageButton btnback1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_homepage);
-
-        btnback1 = findViewById(R.id.back1);
-        btnback1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomePageActivity.this, PageFragment.class);
-                startActivity(intent);
-            }
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_home_page);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
         });
     }
 }
