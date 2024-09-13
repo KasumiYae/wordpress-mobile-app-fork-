@@ -29,7 +29,7 @@ public class PageActivity extends AppCompatActivity {
         ViewPagerAdapter  viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
-
+        // back button of page
         btnback = findViewById(R.id.back);
         btnback.setOnClickListener(new View.OnClickListener() {
             @Override
