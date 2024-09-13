@@ -13,7 +13,7 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/one"
+            android:src="@drawable/ic_account"
             android:layout_marginEnd="10dp" />
 
         <TextView
@@ -42,7 +42,7 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/two"
+            android:src="@drawable/ic_account"
             android:layout_marginEnd="10dp" />
 
         <TextView
@@ -71,7 +71,7 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/three"
+            android:src="@drawable/ic_account"
             android:layout_marginEnd="10dp" />
 
         <TextView
@@ -99,7 +99,7 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/three"
+            android:src="@drawable/ic_account"
             android:layout_marginEnd="10dp" />
 
         <TextView
@@ -127,7 +127,7 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/seven"
+            android:src="@drawable/ic_account"
             android:layout_marginEnd="10dp" />
 
         <TextView
