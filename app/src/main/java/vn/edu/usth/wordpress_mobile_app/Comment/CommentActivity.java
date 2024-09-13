@@ -1,4 +1,4 @@
-package vn.edu.usth.wordpress_mobile_app;
+package vn.edu.usth.wordpress_mobile_app.Comment;
 
 import android.os.Bundle;
 import android.view.View;
@@ -13,7 +13,9 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.tabs.TabLayout;
 
-public class Comment_main_activity extends AppCompatActivity {
+import vn.edu.usth.wordpress_mobile_app.R;
+
+public class CommentActivity extends AppCompatActivity {
 
 
     TabLayout tabLayout ;

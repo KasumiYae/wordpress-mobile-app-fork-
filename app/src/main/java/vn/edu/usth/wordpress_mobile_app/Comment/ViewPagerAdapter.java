@@ -1,4 +1,4 @@
-package vn.edu.usth.wordpress_mobile_app;
+package vn.edu.usth.wordpress_mobile_app.Comment;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;

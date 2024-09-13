@@ -1,4 +1,4 @@
-package vn.edu.usth.wordpress_mobile_app;
+package vn.edu.usth.wordpress_mobile_app.Page;
 
 import android.os.Bundle;
 
@@ -8,14 +8,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import vn.edu.usth.wordpress_mobile_app.R;
 
-public class replied extends Fragment {
 
+public class RecycleFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_comments_replied, container, false);
+        return inflater.inflate(R.layout.fragment_recycle, container, false);
     }
 }

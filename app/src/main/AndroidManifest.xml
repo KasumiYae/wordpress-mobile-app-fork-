@@ -13,9 +13,23 @@
         android:theme="@style/Theme.Wordpressmobileapp"
         tools:targetApi="31">
         <activity
-            android:name=".Comment_main_activity"
-            android:exported="true" >
-
+            android:name=".Account.nono"
+            android:exported="false" />
+        <activity
+            android:name=".Account.AccountActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Page.PageActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Page.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Post.PostActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Comment.CommentActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

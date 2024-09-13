@@ -1,4 +1,4 @@
-package vn.edu.usth.wordpress_mobile_app;
+package vn.edu.usth.wordpress_mobile_app.Comment;
 
 import android.os.Bundle;
 
@@ -8,13 +8,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import vn.edu.usth.wordpress_mobile_app.R;
 
-public class pending extends Fragment {
+
+public class Bin extends Fragment {
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_comments_pending, container, false);
+        return inflater.inflate(R.layout.fragment_bin, container, false);
     }
 }

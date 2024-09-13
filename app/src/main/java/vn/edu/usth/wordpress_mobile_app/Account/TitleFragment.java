@@ -1,4 +1,4 @@
-package vn.edu.usth.wordpress;
+package vn.edu.usth.wordpress_mobile_app.Account;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,6 +10,8 @@ import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
 import androidx.fragment.app.Fragment;
+
+import vn.edu.usth.wordpress_mobile_app.R;
 
 public class TitleFragment extends Fragment {
 
