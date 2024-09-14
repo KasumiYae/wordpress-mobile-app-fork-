@@ -22,7 +22,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginEnd="16dp"
-            android:src="@drawable/ic_avatar"
+            android:src="@drawable/user_16"
             android:contentDescription="User Avatar" />
 
         <LinearLayout
@@ -71,7 +71,7 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_account"
+                android:src="@drawable/user_16"
                 android:contentDescription="Profile Icon"
                 app:tint="@android:color/black" />
 
@@ -96,7 +96,7 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_account_setting"
+                android:src="@drawable/user_16"
                 android:contentDescription="Account Settings Icon"
                 app:tint="@android:color/black"/>
 
@@ -121,7 +121,7 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_app_setting"
+                android:src="@drawable/user_16"
                 android:contentDescription="App Settings Icon"
                 app:tint="@android:color/black"/>
 
@@ -146,7 +146,7 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_help"
+                android:src="@drawable/user_16"
                 android:contentDescription="Help Icon"
                 app:tint="@android:color/black"/>
 
@@ -171,7 +171,7 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_refer"
+                android:src="@drawable/user_16"
                 android:contentDescription="Refer Icon"
                 app:tint="@android:color/black"/>
 
@@ -196,7 +196,7 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_about"
+                android:src="@drawable/user_16"
                 android:contentDescription="About Icon"
                 app:tint="@android:color/black"/>
 
@@ -221,7 +221,7 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_logout"
+                android:src="@drawable/user_16"
                 android:contentDescription="Logout Icon"
                 app:tint="@android:color/black"/>
 
