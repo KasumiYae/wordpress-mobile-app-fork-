@@ -23,16 +23,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main2);
-        siteIconButton = findViewById(R.id.site_icon);
-        titleTextView = findViewById(R.id.title);
-        linkTextView = findViewById(R.id.link);
-        postIcon = findViewById(R.id.post_icon);
-        pageIcon = findViewById(R.id.page_icon);
-        mediaIcon = findViewById(R.id.media_icon);
-        commentIcon = findViewById(R.id.comment_icon);
-        profileIcon = findViewById(R.id.profile_icon);
-        settingIcon = findViewById(R.id.setting_icon);
-        wordpressIcon = findViewById(R.id.wordpress_icon);
-        plusButton = findViewById(R.id.plus_icon);
+//        siteIconButton = findViewById(R.id.site_icon);
+//        titleTextView = findViewById(R.id.title);
+//        linkTextView = findViewById(R.id.link);
+//        postIcon = findViewById(R.id.post_icon);
+//        pageIcon = findViewById(R.id.page_icon);
+//        mediaIcon = findViewById(R.id.media_icon);
+//        commentIcon = findViewById(R.id.comment_icon);
+//        profileIcon = findViewById(R.id.profile_icon);
+//        settingIcon = findViewById(R.id.setting_icon);
+//        wordpressIcon = findViewById(R.id.wordpress_icon);
+//        plusButton = findViewById(R.id.plus_icon);
     }
 }

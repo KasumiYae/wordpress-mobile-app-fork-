@@ -39,10 +39,6 @@
 
         </LinearLayout>
 
-
-
-
-
     </RelativeLayout>
 
     <com.google.android.material.tabs.TabLayout

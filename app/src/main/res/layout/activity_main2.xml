@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_margin="12dp"
+    android:paddingTop="12dp"
+    android:layout_margin="16dp"
     tools:context=".MainActivity">
 
     <RelativeLayout
+        android:id="@+id/header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
@@ -28,14 +29,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/site_icon">
+            android:layout_toEndOf="@+id/site_icon">
 
             <TextView
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 android:text="Title">
             </TextView>
 
@@ -45,9 +46,8 @@
                 android:layout_height="wrap_content"
                 android:text="banhmibunrieu.wordpress.com"
                 android:textColorLink="@android:color/holo_blue_dark"
-                android:drawableEnd="@drawable/link"
-                android:drawableTint="#1a9ccb"
-                android:autoLink="web">
+                android:autoLink="web" app:drawableTint="@color/blue"
+                app:drawableEndCompat="@drawable/link">
             </TextView>
 
 
@@ -66,17 +66,21 @@
     </RelativeLayout>
     
     <TextView
+        android:id="@+id/text_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
+        android:layout_below="@+id/header"
         android:text="Content"
-        android:textColor="@color/dark_grey"/>
+        android:textColor="@color/dark_gray"/>
 
     <RelativeLayout
+        android:id="@+id/post_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:layout_marginTop="15dp">
+        android:layout_below="@+id/text_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
 
         <ImageView
             android:id="@+id/post_icon"
@@ -89,15 +93,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/post_icon"
+            android:layout_toEndOf="@+id/post_icon"
             android:layout_centerVertical="true"
             android:text="Post"/>
     </RelativeLayout>
+
     <RelativeLayout
+        android:id="@+id/page_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:padding="5dp">
+        android:layout_below="@+id/post_item"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
 
         <ImageView
             android:id="@+id/page_icon"
@@ -110,15 +117,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/page_icon"
+            android:layout_toEndOf="@+id/page_icon"
             android:layout_centerVertical="true"
             android:text="Pages"/>
     </RelativeLayout>
+
     <RelativeLayout
+        android:id="@+id/media_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:padding="5dp">
+        android:layout_below="@+id/page_item"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
 
         <ImageView
             android:id="@+id/media_icon"
@@ -131,15 +141,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/media_icon"
+            android:layout_toEndOf="@+id/media_icon"
             android:layout_centerVertical="true"
             android:text="Media"/>
     </RelativeLayout>
+
     <RelativeLayout
+        android:id="@+id/comment_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:layout_marginTop="15dp">
+        android:layout_below="@+id/media_item"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
 
         <ImageView
             android:id="@+id/comment_icon"
@@ -152,23 +165,27 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/comment_icon"
+            android:layout_toEndOf="@+id/comment_icon"
             android:layout_centerVertical="true"
             android:text="Comments"/>
     </RelativeLayout>
 
     <TextView
+        android:id="@+id/text_manage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/comment_item"
         android:layout_marginTop="15dp"
         android:text="Manage"
-        android:textColor="@color/dark_grey"/>
+        android:textColor="@color/dark_gray"/>
 
     <RelativeLayout
+        android:id="@+id/profile_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:layout_marginTop="15dp">
+        android:layout_below="@+id/text_manage"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
 
         <ImageView
             android:id="@+id/profile_icon"
@@ -181,15 +198,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/profile_icon"
+            android:layout_toEndOf="@+id/profile_icon"
             android:layout_centerVertical="true"
             android:text="Me"/>
     </RelativeLayout>
+
     <RelativeLayout
+        android:id="@+id/setting_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:padding="5dp">
+        android:layout_below="@+id/profile_item"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
 
         <ImageView
             android:id="@+id/setting_icon"
@@ -202,15 +222,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/setting_icon"
+            android:layout_toEndOf="@+id/setting_icon"
             android:layout_centerVertical="true"
             android:text="Blog Settings"/>
     </RelativeLayout>
+
     <RelativeLayout
+        android:id="@+id/wordpress_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:padding="5dp">
+        android:layout_below="@+id/setting_item"
+        android:layout_marginTop="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
 
         <ImageView
             android:id="@+id/wordpress_icon"
@@ -223,16 +247,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/wordpress_icon"
+            android:layout_toEndOf="@+id/wordpress_icon"
             android:layout_centerVertical="true"
-            android:drawableEnd="@drawable/link"
             android:drawablePadding="6dp"
-            android:text="WP Admin"/>
+            android:text="WP Admin"
+            app:drawableEndCompat="@drawable/link" />
     </RelativeLayout>
 
     <LinearLayout
+        android:id="@+id/footer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/wordpress_item"
         android:layout_marginTop="20dp"
         android:background="@drawable/bolder"
         android:orientation="vertical"
@@ -324,7 +350,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Unlock your site's full potential. Get stats, notifications and more with Jetpack "
-                android:textSize="18dp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/link_text"
@@ -333,28 +359,23 @@
                 android:layout_marginTop="15dp"
                 android:autoLink="web"
                 android:text="More optional"
-                android:textColor="#4CAF50"
+                android:textColor="@color/green"
                 android:textStyle="bold" />
         </LinearLayout>
 
     </LinearLayout>
-    <FrameLayout
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:padding="16dp">
-        <ImageView
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:src="@drawable/black_bolder"/>
-        <ImageView
-            android:id="@+id/plus_icon"
-            android:layout_width="18dp"
-            android:layout_height="18dp"
-            android:layout_gravity="center"
-            android:src="@drawable/plus_24"
-            app:tint="@color/white" />
-    </FrameLayout>
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        app:srcCompat="@drawable/plus"
+        app:tint="@color/white"
+        app:backgroundTint="@color/black"/>
 
-</LinearLayout>
+</RelativeLayout>
 
