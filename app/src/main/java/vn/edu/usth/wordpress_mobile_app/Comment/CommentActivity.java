@@ -18,6 +18,8 @@ import vn.edu.usth.wordpress_mobile_app.R;
 public class CommentActivity extends AppCompatActivity {
 
 
+
+
     TabLayout tabLayout ;
     ViewPager2 viewPager2 ;
     ViewPagerAdapter viewPagerAdapter ;
@@ -26,6 +28,7 @@ public class CommentActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_comment);
@@ -65,7 +68,7 @@ public class CommentActivity extends AppCompatActivity {
         });
 
 
-        ImageView backIcon = findViewById(R.id.back_icon);
+        ImageView backIcon = findViewById(R.id.back);
         backIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
