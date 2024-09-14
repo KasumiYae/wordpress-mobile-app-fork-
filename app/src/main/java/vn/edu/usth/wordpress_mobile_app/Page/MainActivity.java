@@ -10,12 +10,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import vn.edu.usth.wordpress_mobile_app.R;
 
 public class MainActivity extends AppCompatActivity {
-    private Button button;
+    Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        // Initialize the button to go page
         button = findViewById(R.id.btnclickon);
         button.setOnClickListener(new View.OnClickListener() {
             @Override

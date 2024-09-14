@@ -9,7 +9,7 @@
     android:rotationX="0"
     android:rotationY="0"
     android:background="@color/white"
-    tools:context=".MainActivity">
+    tools:context="Page.MainActivity">
 
     <Button
         android:id="@+id/btnclickon"

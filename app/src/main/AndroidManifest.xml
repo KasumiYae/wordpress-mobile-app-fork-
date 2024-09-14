@@ -13,8 +13,8 @@
         android:theme="@style/Theme.Wordpressmobileapp"
         tools:targetApi="31">
         <activity
-            android:name=".Account.nono"
-            android:exported="false" />
+            android:name=".Media.MediaActivity"
+            android:exported="true" />
         <activity
             android:name=".Account.AccountActivity"
             android:exported="true" />
