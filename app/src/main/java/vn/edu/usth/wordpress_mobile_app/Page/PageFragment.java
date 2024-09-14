@@ -15,23 +15,12 @@ import vn.edu.usth.wordpress_mobile_app.R;
 
 
 public class PageFragment extends Fragment {
-    Button gotoPageHome;
+    Button gotoPageHome, gotoPageIntroduction, gotoPageNews;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_page, container, false);
-        gotoPageHome = view.findViewById(R.id.home_page);
-        gotoPageHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Fragment homePageFragment = new PageHomeFragment();
-                FragmentTransaction fm = getActivity().getSupportFragmentManager().beginTransaction();
-                fm.replace(R.id.main1, homePageFragment);
-                fm.commit();
-            }
-        });
-        return view;
+        return inflater.inflate(R.layout.fragment_page, container, false);
     }
 }

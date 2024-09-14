@@ -8,4 +8,17 @@
     <string name="post">post</string>
     <string name="hello">hello</string>
     <string name="_8_hours_ago">8 hours ago</string>
+    <string name="homepage">Homepage</string>
+    <string name="home_page">home_page</string>
+    <string name="introduction">Introduction</string>
+    <string name="moreinfo1">moreinfo1</string>
+    <string name="news">News</string>
+    <string name="moreinfo2">moreinfo2</string>
+    <string name="page">Page</string>
+    <string name="to_search">to_search</string>
+    <string name="go_back">go_back</string>
+    <string name="published">Published</string>
+    <string name="drafts">Drafts</string>
+    <string name="scheduled">Scheduled</string>
+    <string name="trashed">Trashed</string>
 </resources>
