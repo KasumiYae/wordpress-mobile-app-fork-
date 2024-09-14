@@ -5,6 +5,5 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.Wordpressmobileapp" parent="Theme.AppCompat.NoActionBar" />
+    <style name="Theme.Wordpressmobileapp" parent="Base.Theme.Wordpressmobileapp" />
 </resources>
-
