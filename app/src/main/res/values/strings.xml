@@ -21,4 +21,8 @@
     <string name="drafts">Drafts</string>
     <string name="scheduled">Scheduled</string>
     <string name="trashed">Trashed</string>
+    <string name="_5_days_ago">5 days ago</string>
+    <string name="khiem_pham_on_hello_world">Khiem Pham on Hello World:</string>
+    <string name="nice">Nice</string>
+    <string name="comment">Comment</string>
 </resources>
