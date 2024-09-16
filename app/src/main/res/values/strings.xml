@@ -22,7 +22,26 @@
     <string name="scheduled">Scheduled</string>
     <string name="trashed">Trashed</string>
     <string name="_5_days_ago">5 days ago</string>
+
     <string name="khiem_pham_on_hello_world">Khiem Pham on Hello World:</string>
     <string name="nice">Nice</string>
     <string name="comment">Comment</string>
+    <string name="_8_hours_ago6_days_ago">8 hours ago</string>
+    <string name="khanh_Ngoc_on_hello_world">khanh ngoc on hello world\n</string>
+    <string name="two">perfect\n\n</string>
+    <string name="three">oh sheetttt\n\n</string>
+    <string name="four">ngonlllllll\n\n</string>
+    <string name="five">coming\n\n</string>
+    <string name="six">comback\n\n</string>
+    <string name="hai">Hai on the Hello World\n\n</string>
+    <string name="huyen">Huyen anh on the hello world\n\n</string>
+    <string name="vanh">Vanh on the hellp world\n\n</string>
+    <string name="Viet">Viet Anh on the hello world\n\n</string>
+    <string name="khiem1">Khiem on the hello world</string>
+    <string name="Khanh2">Awaii on the hello world</string>
+    <string name="iwill">I will comeback next week</string>
+    <string name="maou">"Chua te bong toi "</string>
+    <string name="cmt">yesssssssss</string>
+    <string name="chuahe">beautifull</string>
+    <string name="he">Kawaii on the hello world</string>
 </resources>

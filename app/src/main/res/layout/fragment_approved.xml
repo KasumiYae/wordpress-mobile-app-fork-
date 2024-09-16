@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:ellipsize="end"
-                android:text="@string/khiem_pham_on_hello_world"/>
+                android:text="@string/maou"/>
 
             <TextView
                 android:textColor="@color/gray"
@@ -51,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:ellipsize="end"
-                android:text="@string/nice"/>
+                android:text="@string/cmt"/>
 
             <View
                 android:layout_marginTop="8dp"
@@ -86,11 +86,7 @@
             android:layout_toEndOf="@+id/ava2"
             android:orientation="vertical">
 
-            <TextView
-                android:textColor="@color/gray"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/_5_days_ago"/>
+
 
             <TextView
                 android:textColor="@color/black"
@@ -98,7 +94,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:ellipsize="end"
-                android:text="@string/khiem_pham_on_hello_world"/>
+                android:text="@string/he"/>
 
             <TextView
                 android:textColor="@color/gray"
@@ -106,7 +102,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:ellipsize="end"
-                android:text="@string/nice"/>
+                android:text="@string/chuahe"/>
 
             <View
                 android:layout_marginTop="8dp"

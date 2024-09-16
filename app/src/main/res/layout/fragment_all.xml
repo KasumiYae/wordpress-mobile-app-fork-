@@ -40,7 +40,7 @@
                 android:textColor="@color/gray"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/_5_days_ago"/>
+                android:text="@string/_8_hours_ago6_days_ago"/>
 
             <TextView
                 android:textColor="@color/black"
@@ -95,7 +95,7 @@
                 android:textColor="@color/gray"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/_5_days_ago"/>
+                android:text="@string/_8_hours_ago6_days_ago"/>
 
             <TextView
                 android:textColor="@color/black"
@@ -103,7 +103,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:ellipsize="end"
-                android:text="@string/khiem_pham_on_hello_world"/>
+                android:text="@string/khanh_Ngoc_on_hello_world"/>
 
             <TextView
                 android:textColor="@color/gray"
@@ -111,7 +111,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:ellipsize="end"
-                android:text="@string/nice"/>
+                android:text="@string/two"/>
 
             <View
                 android:layout_marginTop="8dp"
@@ -134,7 +134,7 @@
         android:background="?attr/selectableItemBackground">
 
         <ImageView
-            android:id="@+id/ava2"
+            android:id="@+id/ava3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -144,14 +144,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/ava2"
+            android:layout_toEndOf="@+id/ava3"
             android:orientation="vertical">
 
             <TextView
                 android:textColor="@color/gray"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/_5_days_ago"/>
+                android:text="@string/_8_hours_ago6_days_ago"/>
 
             <TextView
                 android:textColor="@color/black"
@@ -159,7 +159,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:ellipsize="end"
-                android:text="@string/khiem_pham_on_hello_world"/>
+                android:text="@string/hai"/>
 
             <TextView
                 android:textColor="@color/gray"
@@ -167,119 +167,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:ellipsize="end"
-                android:text="@string/nice"/>
-
-            <View
-                android:layout_marginTop="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/light_gray"/>
-
-        </LinearLayout>
-    </RelativeLayout>
-
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        android:paddingTop="12dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:background="?attr/selectableItemBackground">
-
-        <ImageView
-            android:id="@+id/ava2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="10dp"
-            android:src="@drawable/user_64"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/ava2"
-            android:orientation="vertical">
-
-            <TextView
-                android:textColor="@color/gray"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/_5_days_ago"/>
-
-            <TextView
-                android:textColor="@color/black"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:maxLines="1"
-                android:ellipsize="end"
-                android:text="@string/khiem_pham_on_hello_world"/>
-
-            <TextView
-                android:textColor="@color/gray"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:maxLines="1"
-                android:ellipsize="end"
-                android:text="@string/nice"/>
-
-            <View
-                android:layout_marginTop="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/light_gray"/>
-
-        </LinearLayout>
-    </RelativeLayout>
-
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        android:paddingTop="12dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:background="?attr/selectableItemBackground">
-
-        <ImageView
-            android:id="@+id/ava2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="10dp"
-            android:src="@drawable/user_64"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/ava2"
-            android:orientation="vertical">
-
-            <TextView
-                android:textColor="@color/gray"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/_5_days_ago"/>
-
-            <TextView
-                android:textColor="@color/black"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:maxLines="1"
-                android:ellipsize="end"
-                android:text="@string/khiem_pham_on_hello_world"/>
-
-            <TextView
-                android:textColor="@color/gray"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:maxLines="1"
-                android:ellipsize="end"
-                android:text="@string/nice"/>
+                android:text="@string/three"/>
 
             <View
                 android:layout_marginTop="8dp"
@@ -301,7 +189,7 @@
         android:background="?attr/selectableItemBackground">
 
         <ImageView
-            android:id="@+id/ava2"
+            android:id="@+id/ava4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -311,14 +199,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/ava2"
+            android:layout_toEndOf="@+id/ava4"
             android:orientation="vertical">
 
             <TextView
                 android:textColor="@color/gray"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/_5_days_ago"/>
+                android:text="@string/_8_hours_ago6_days_ago"/>
 
             <TextView
                 android:textColor="@color/black"
@@ -326,7 +214,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:ellipsize="end"
-                android:text="@string/khiem_pham_on_hello_world"/>
+                android:text="@string/huyen"/>
 
             <TextView
                 android:textColor="@color/gray"
@@ -334,7 +222,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:ellipsize="end"
-                android:text="@string/nice"/>
+                android:text="@string/four"/>
 
             <View
                 android:layout_marginTop="8dp"
@@ -356,7 +244,7 @@
         android:background="?attr/selectableItemBackground">
 
         <ImageView
-            android:id="@+id/ava2"
+            android:id="@+id/ava5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -366,14 +254,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/ava2"
+            android:layout_toEndOf="@+id/ava5"
             android:orientation="vertical">
 
             <TextView
                 android:textColor="@color/gray"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/_5_days_ago"/>
+                android:text="@string/_8_hours_ago6_days_ago"/>
 
             <TextView
                 android:textColor="@color/black"
@@ -381,7 +269,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:ellipsize="end"
-                android:text="@string/khiem_pham_on_hello_world"/>
+                android:text="@string/vanh"/>
 
             <TextView
                 android:textColor="@color/gray"
@@ -389,7 +277,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:ellipsize="end"
-                android:text="@string/nice"/>
+                android:text="@string/five"/>
 
             <View
                 android:layout_marginTop="8dp"
@@ -411,7 +299,7 @@
         android:background="?attr/selectableItemBackground">
 
         <ImageView
-            android:id="@+id/ava2"
+            android:id="@+id/ava6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -421,14 +309,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/ava2"
+            android:layout_toEndOf="@+id/ava6"
             android:orientation="vertical">
 
             <TextView
                 android:textColor="@color/gray"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/_5_days_ago"/>
+                android:text="@string/_8_hours_ago6_days_ago"/>
 
             <TextView
                 android:textColor="@color/black"
@@ -436,7 +324,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:ellipsize="end"
-                android:text="@string/khiem_pham_on_hello_world"/>
+                android:text="@string/Viet"/>
 
             <TextView
                 android:textColor="@color/gray"
@@ -444,7 +332,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:ellipsize="end"
-                android:text="@string/nice"/>
+                android:text="@string/six"/>
 
             <View
                 android:layout_marginTop="8dp"
@@ -455,224 +343,7 @@
         </LinearLayout>
     </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        android:paddingTop="12dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:background="?attr/selectableItemBackground">
 
-        <ImageView
-            android:id="@+id/ava2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="10dp"
-            android:src="@drawable/user_64"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/ava2"
-            android:orientation="vertical">
-
-            <TextView
-                android:textColor="@color/gray"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/_5_days_ago"/>
-
-            <TextView
-                android:textColor="@color/black"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:maxLines="1"
-                android:ellipsize="end"
-                android:text="@string/khiem_pham_on_hello_world"/>
-
-            <TextView
-                android:textColor="@color/gray"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:maxLines="1"
-                android:ellipsize="end"
-                android:text="@string/nice"/>
-
-            <View
-                android:layout_marginTop="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/light_gray"/>
-
-        </LinearLayout>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        android:paddingTop="12dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:background="?attr/selectableItemBackground">
-
-        <ImageView
-            android:id="@+id/ava2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="10dp"
-            android:src="@drawable/user_64"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/ava2"
-            android:orientation="vertical">
-
-            <TextView
-                android:textColor="@color/gray"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/_5_days_ago"/>
-
-            <TextView
-                android:textColor="@color/black"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:maxLines="1"
-                android:ellipsize="end"
-                android:text="@string/khiem_pham_on_hello_world"/>
-
-            <TextView
-                android:textColor="@color/gray"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:maxLines="1"
-                android:ellipsize="end"
-                android:text="@string/nice"/>
-
-            <View
-                android:layout_marginTop="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/light_gray"/>
-
-        </LinearLayout>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        android:paddingTop="12dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:background="?attr/selectableItemBackground">
-
-        <ImageView
-            android:id="@+id/ava2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="10dp"
-            android:src="@drawable/user_64"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/ava2"
-            android:orientation="vertical">
-
-            <TextView
-                android:textColor="@color/gray"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/_5_days_ago"/>
-
-            <TextView
-                android:textColor="@color/black"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:maxLines="1"
-                android:ellipsize="end"
-                android:text="@string/khiem_pham_on_hello_world"/>
-
-            <TextView
-                android:textColor="@color/gray"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:maxLines="1"
-                android:ellipsize="end"
-                android:text="@string/nice"/>
-
-            <View
-                android:layout_marginTop="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/light_gray"/>
-
-        </LinearLayout>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        android:paddingTop="12dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:background="?attr/selectableItemBackground">
-
-        <ImageView
-            android:id="@+id/ava2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="10dp"
-            android:src="@drawable/user_64"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/ava2"
-            android:orientation="vertical">
-
-            <TextView
-                android:textColor="@color/gray"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/_5_days_ago"/>
-
-            <TextView
-                android:textColor="@color/black"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:maxLines="1"
-                android:ellipsize="end"
-                android:text="ccccccccccccc"/>
-
-            <TextView
-                android:textColor="@color/gray"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:maxLines="1"
-                android:ellipsize="end"
-                android:text="@string/nice"/>
-
-            <View
-                android:layout_marginTop="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/light_gray"/>
-
-        </LinearLayout>
-    </RelativeLayout>
 </LinearLayout>
+
 </ScrollView>
