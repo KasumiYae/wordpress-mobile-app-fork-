@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,7 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 import vn.edu.usth.wordpress_mobile_app.R;
 
 public class TitleActivity extends AppCompatActivity {
-    private ImageButton btnback;
+    private ImageView btnback;
     private TextView title1, link1, security1, setting_home1, time1, category1, post1, date1, time_format1;
     private Switch allowComments, allowPingbacks, allowRepost;
 
