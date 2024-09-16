@@ -1,6 +1,8 @@
 package vn.edu.usth.wordpress_mobile_app.Post;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,12 +17,14 @@ import vn.edu.usth.wordpress_mobile_app.R;
 
 public class PostActivity extends AppCompatActivity {
 
+    private ImageButton btnback;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_post);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.post_layout), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
@@ -34,13 +38,12 @@ public class PostActivity extends AppCompatActivity {
         TabLayout tabLayout =findViewById(R.id.tab);
         tabLayout.setupWithViewPager(pager);
 
-//        ImageButton btnback = findViewById(R.id.back);
-//        btnback.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(PostActivity.this ,MainActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+        btnback = findViewById(R.id.back);
+        btnback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 }

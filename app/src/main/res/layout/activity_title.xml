@@ -22,7 +22,9 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
+                android:id="@+id/back"
                 android:src="@drawable/back"/>
+
 
             <TextView
                 android:id="@+id/title_text"

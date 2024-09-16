@@ -1,15 +1,70 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFD1DC"
-    tools:context=".all">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <!-- Toolbar -->
+
+    <GridLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:id="@+id/gridLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:padding="8dp"
+        android:rowCount="3"
+        android:layout_marginTop="16dp">
 
-</FrameLayout>
+        <!-- Media item 1 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:padding="4dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:src="@drawable/user_64"
+                android:scaleType="centerCrop" />
+        </LinearLayout>
+
+        <!-- Media item 2 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:padding="4dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:src="@drawable/user_64"
+                android:scaleType="centerCrop" />
+        </LinearLayout>
+
+        <!-- Media item 3 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:padding="4dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:src="@drawable/user_64"
+                android:scaleType="centerCrop" />
+        </LinearLayout>
+
+        <!-- Add more media items as needed... -->
+
+    </GridLayout>
+

@@ -3,6 +3,7 @@ package vn.edu.usth.wordpress_mobile_app.Account;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,11 +16,11 @@ import androidx.core.view.WindowInsetsCompat;
 import vn.edu.usth.wordpress_mobile_app.R;
 
 public class TitleActivity extends AppCompatActivity {
-
+    private ImageButton btnback;
     private TextView title1, link1, security1, setting_home1, time1, category1, post1, date1, time_format1;
     private Switch allowComments, allowPingbacks, allowRepost;
 
-    @SuppressLint("MissingInflatedId")
+//    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +30,15 @@ public class TitleActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+
+        btnback = findViewById(R.id.back);
+        btnback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
         });
 
         title1 = findViewById(R.id.title_text);
