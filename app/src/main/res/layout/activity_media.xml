@@ -12,7 +12,7 @@
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:padding="12dp">
 
         <ImageButton
             android:id="@+id/back"
@@ -29,9 +29,10 @@
             android:layout_toEndOf="@+id/back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
+            android:layout_marginStart="30dp"
             android:layout_centerVertical="true"
-            android:text="MEDIA"
+            android:textColor="@color/black"
+            android:text="Media"
             android:textStyle="bold"
             android:textSize="25sp"/>
 
@@ -39,12 +40,24 @@
             android:id="@+id/search"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:layout_alignParentEnd="true"
+            android:layout_toStartOf="@+id/add"
             android:layout_centerVertical="true"
             android:clickable="true"
             android:focusable="true"
             android:background="?attr/selectableItemBackground"
             android:src="@drawable/search"/>
+
+        <ImageButton
+            android:id="@+id/add"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/plus_32"/>
+
     </RelativeLayout>
 
     <com.google.android.material.tabs.TabLayout

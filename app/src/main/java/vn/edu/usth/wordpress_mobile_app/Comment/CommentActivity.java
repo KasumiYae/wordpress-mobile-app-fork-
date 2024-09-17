@@ -9,23 +9,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.tabs.TabLayout;
 
+import vn.edu.usth.wordpress_mobile_app.Post.PostFragmentAdapter;
 import vn.edu.usth.wordpress_mobile_app.R;
 
 public class CommentActivity extends AppCompatActivity {
-
-
-
-
-    TabLayout tabLayout ;
-    ViewPager2 viewPager2 ;
-    ViewPagerAdapter viewPagerAdapter ;
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -33,33 +25,15 @@ public class CommentActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_comment);
 
-        tabLayout = findViewById(R.id.tabLayout2) ;
-        viewPager2 = findViewById(R.id.viewPage);
-        viewPagerAdapter = new ViewPagerAdapter(this) ;
-        viewPager2.setAdapter(viewPagerAdapter);
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                viewPager2.setCurrentItem(tab.getPosition());
-            }
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
 
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
+        ViewPager pager = findViewById(R.id.View_pager);
+        pager.setOffscreenPageLimit(4);
+        pager.setAdapter(adapter);
 
-            }
+        TabLayout tabLayout =findViewById(R.id.tabLayout);
+        tabLayout.setupWithViewPager(pager);
 
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
-        viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-            @Override
-            public void onPageSelected(int position) {
-                super.onPageSelected(position);
-                tabLayout.getTabAt(position).select();
-            }
-        });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.comment_layout), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

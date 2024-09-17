@@ -11,24 +11,25 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 
+import vn.edu.usth.wordpress_mobile_app.Post.PostFragmentAdapter;
 import vn.edu.usth.wordpress_mobile_app.R;
 
 
 public class PageActivity extends AppCompatActivity {
-    private TabLayout tabLayout;
-    private ViewPager viewPager;
     private ImageButton btnback;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page);
 
-        tabLayout = findViewById(R.id.tab_layout);
-        viewPager = findViewById(R.id.view_pager);
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
 
-        ViewPagerAdapter  viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-        viewPager.setAdapter(viewPagerAdapter);
-        tabLayout.setupWithViewPager(viewPager);
+        ViewPager pager = findViewById(R.id.view_pager);
+        pager.setOffscreenPageLimit(4);
+        pager.setAdapter(adapter);
+
+        TabLayout tabLayout =findViewById(R.id.tab_layout);
+        tabLayout.setupWithViewPager(pager);
         // back button of page
         btnback = findViewById(R.id.back);
         btnback.setOnClickListener(new View.OnClickListener() {

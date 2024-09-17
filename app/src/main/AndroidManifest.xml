@@ -16,7 +16,7 @@
             android:name=".Page.HomePageActivity"
             android:exported="false" />
         <activity
-            android:name=".Account.TitleActivity"
+            android:name=".Account.Blog_SettingActivity"
             android:exported="true" />
         <activity
             android:name=".Media.MediaActivity"

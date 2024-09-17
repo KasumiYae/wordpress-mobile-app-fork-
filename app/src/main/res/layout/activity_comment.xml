@@ -6,13 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
     tools:context=".Comment.CommentActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:padding="12dp">
 
         <ImageButton
             android:id="@+id/back"
@@ -40,53 +39,16 @@
     </RelativeLayout>
 
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabLayout2"
+        android:id="@+id/tabLayout"
         android:layout_width="match_parent"
-        app:tabTextColor="@color/black"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp">
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="All" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="pending" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Unanswered" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="replied" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Approved" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Spam" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Bin" />
+        app:tabMode="scrollable">
     </com.google.android.material.tabs.TabLayout>
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPage"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/View_pager"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_height="wrap_content"/>
 
 
 </LinearLayout>

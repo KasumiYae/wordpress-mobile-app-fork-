@@ -1,321 +1,354 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/account"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@android:color/white"
-    tools:context=".Account.AccountActivity"
-    android:padding="16dp">
-
+    android:layout_margin="16dp"
+    tools:context=".Account.AccountActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:paddingBottom="5dp">
-
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:id="@+id/back"
-            android:src="@drawable/back"
-            android:background="?attr/selectableItemBackground"/>
-
-
-
-        <TextView
-            android:id="@+id/title_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="Me"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:paddingBottom="16dp">
-
-        <ImageView
-            android:id="@+id/avatar"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginEnd="16dp"
-            android:src="@drawable/user_32"
-            android:contentDescription="User Avatar" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Alexander the Great"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/username"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="\@Alexandercute123"
-                android:textSize="14sp"
-                android:textColor="#888888" />
-        </LinearLayout>
-    </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#E0E0E0" />
-
-
-    <LinearLayout
-        android:id="@+id/profile1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <LinearLayout
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground"
+                android:src="@drawable/back"/>
+
+            <TextView
+                android:layout_toEndOf="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_centerVertical="true"
+                android:text="Me"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="25sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:padding="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
+
+            <ImageView
+                android:id="@+id/avatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/user_64"
+                android:contentDescription="User Avatar" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/avatar"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alexander the Great"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\@Alexandercute123"
+                    android:textColor="@color/gray" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
             android:background="?android:attr/selectableItemBackground">
 
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/user_16"
+                android:id="@+id/user_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/user_24"
                 android:contentDescription="Profile Icon" />
 
             <TextView
-                android:id="@+id/profile"
+                android:id="@+id/text_profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:textColor="@color/black"
-                android:text="My Profile"
-                android:textSize="16sp" />
-        </LinearLayout>
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@id/user_icon"
+                android:text="My Profile" />
+        </RelativeLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#E0E0E0"/>
+            android:background="@color/light_gray"/>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:padding="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
             android:background="?android:attr/selectableItemBackground">
 
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/setting_16"
+                android:id="@+id/setting_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/settings"
                 android:contentDescription="Account Settings Icon"/>
 
             <TextView
-                android:id="@+id/account_settings"
+                android:id="@+id/text_settings"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:textColor="@color/black"
-                android:text="Account Settings"
-                android:textSize="16sp" />
-        </LinearLayout>
+                android:layout_toEndOf="@+id/setting_icon"
+                android:layout_marginStart="20dp"
+                android:text="Account Settings"/>
+        </RelativeLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#E0E0E0"/>
+            android:background="@color/light_gray"/>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:padding="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
             android:background="?android:attr/selectableItemBackground">
 
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/setting_32"
+                android:id="@+id/phone_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/phone_24"
                 android:contentDescription="App Settings Icon" />
 
             <TextView
                 android:id="@+id/app_settings"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="App Settings"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
-        </LinearLayout>
+                android:layout_toEndOf="@+id/phone_icon"
+                android:layout_marginStart="20dp"
+                android:text="App Settings" />
+        </RelativeLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#E0E0E0"/>
+            android:background="@color/light_gray"/>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:padding="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
             android:background="?android:attr/selectableItemBackground">
 
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/help"
+                android:id="@+id/help_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/help_24"
                 android:contentDescription="Help Icon" />
 
             <TextView
-                android:id="@+id/help"
+                android:id="@+id/text_help"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="Help"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
-        </LinearLayout>
+                android:layout_toEndOf="@+id/help_icon"
+                android:layout_marginStart="20dp"
+                android:text="Help" />
+        </RelativeLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#E0E0E0"/>
+            android:background="@color/light_gray"/>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:padding="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
             android:background="?android:attr/selectableItemBackground">
 
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/share"
+                android:id="@+id/Refer_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/share_24"
                 android:contentDescription="Refer Icon" />
 
             <TextView
-                android:id="@+id/refer"
+                android:id="@+id/text_refer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:textColor="@color/black"
-                android:text="Refer WordPress to Friends"
-                android:textSize="16sp" />
-        </LinearLayout>
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/Refer_icon"
+                android:text="Refer WordPress to Friends" />
+        </RelativeLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#E0E0E0"/>
+            android:background="@color/light_gray"/>
 
-
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:padding="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
             android:background="?android:attr/selectableItemBackground">
 
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/menu"
+                android:id="@+id/wordpress_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/wordpress"
                 android:contentDescription="About Icon" />
 
             <TextView
-                android:id="@+id/about"
+                android:id="@+id/text_about"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="About WordPress"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
-        </LinearLayout>
+                android:layout_toEndOf="@+id/wordpress_icon"
+                android:layout_marginStart="20dp"
+                android:text="About WordPress" />
+        </RelativeLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#E0E0E0"/>
+            android:background="@color/light_gray"/>
 
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:padding="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
             android:background="?android:attr/selectableItemBackground">
 
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/logout"
+                android:id="@+id/logout_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/logout_24"
                 android:contentDescription="Logout Icon" />
 
             <TextView
-                android:id="@+id/logout"
+                android:id="@+id/text_logout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="Log Out of Account"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:layout_toEndOf="@+id/logout_icon"
+                android:layout_marginStart="20dp"
+                android:text="Log Out of Account"/>
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_gray"/>
+
+        <LinearLayout
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bolder"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/wordpress_32"/>
+
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/google_32"
+                   app:tint="@color/blue"
+                   android:rotation="-90"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/unlock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your WordPress.com profile is powered by Gravatar"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Updating your avatar, name, and about inf here will also update it across all sites that use Gravatar profiles."/>
+
+                <TextView
+                    android:id="@+id/link_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="What is Gravatar?"
+                    android:autoLink="web"
+                    android:textColor="@color/green"
+                    app:drawableEndCompat="@drawable/link"
+                    android:textStyle="bold"
+                    app:drawableTint="@color/green" />
+            </LinearLayout>
+
         </LinearLayout>
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#E0E0E0"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:paddingTop="16dp">
 
-        <ImageView
-            android:id="@+id/gravatar_logo"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
-
-        <TextView
-            android:id="@+id/gravatar_info"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Your WordPress.com profile is powered by Gravatar"
-            android:textSize="14sp"
-            android:textColor="@color/black"
-            android:paddingStart="8dp" />
-    </LinearLayout>
-
-</LinearLayout>
+</ScrollView>

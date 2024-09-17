@@ -3,41 +3,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     android:orientation="vertical"
     tools:context="Page.PageFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="12dp"
         android:orientation="vertical"
         tools:ignore="RtlSymmetry">
 
         <RelativeLayout
             android:id="@+id/home_page"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="10dp">
+            android:layout_height="wrap_content">
 
             <TextView
-                android:layout_width="match_parent"
+                android:id="@+id/home_page_text"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/homepage"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold"/>
 
             <ImageButton
                 android:id="@+id/imageButton1"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackground"
                 android:layout_alignParentEnd="true"
-                android:background="@color/white"
                 android:contentDescription="@string/home_page"
                 android:src="@drawable/info" />
         </RelativeLayout>
@@ -45,7 +44,6 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_margin="10dp"
             android:background="@color/gray" />
     </LinearLayout>
 
@@ -53,28 +51,29 @@
         android:id="@+id/introduction"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="12dp"
         android:orientation="vertical" >
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="10dp">
+            android:layout_height="wrap_content">
+
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/introduction"
-                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold"/>
             <ImageButton
                 android:id="@+id/imageButton2"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:background="@color/white"
+                android:background="?attr/selectableItemBackground"
                 android:contentDescription="@string/moreinfo1"
                 android:src="@drawable/dots" />
         </RelativeLayout>
@@ -82,37 +81,39 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_margin="10dp"
-            android:background="@color/gray" />
+            android:background="@color/light_gray" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/news"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="12dp"
         android:orientation="vertical" >
+
         <RelativeLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="10dp"
             tools:ignore="UselessParent">
+
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
                 android:text="@string/news"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
             <ImageButton
                 android:id="@+id/imageButton3"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:background="@color/white"
+                android:background="?attr/selectableItemBackground"
                 android:contentDescription="@string/moreinfo2"
                 android:src="@drawable/dots" />
         </RelativeLayout>
@@ -120,8 +121,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_margin="10dp"
-            android:background="@color/gray" />
+            android:background="@color/light_gray" />
     </LinearLayout>
 
 </LinearLayout>

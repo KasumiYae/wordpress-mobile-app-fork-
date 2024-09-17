@@ -9,7 +9,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 public class PostFragmentAdapter extends FragmentPagerAdapter {
     private final int PAGE_COUNT = 4;
-    private String titles[] = new String[] { "POSTED", "DRAFT", "SCHEDULE", "TRASH" };
+    private String titles[] = new String[] { "Posted", "Draft", "Schedule", "Trash" };
     public PostFragmentAdapter(FragmentManager fm) {
         super(fm);
     }
@@ -22,8 +22,8 @@ public class PostFragmentAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int page) {
 // returns an instance of Fragment corresponding to the specified page
         switch (page) {
-            case 1: return new DraftFragment();
-            case 2: return new ScheduleFragment();
+            case 1: return new PostDraftFragment();
+            case 2: return new PostScheduleFragment();
             case 3: return new TrashFragment();
             default: return new PostedFragment();
         }

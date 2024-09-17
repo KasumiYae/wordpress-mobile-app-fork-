@@ -38,13 +38,5 @@ public class AccountActivity extends AppCompatActivity {
             }
         });
 
-
-        profile1 = findViewById(R.id.profile);
-        accountSettings1 = findViewById(R.id.account_settings);
-        appSettings1 = findViewById(R.id.app_settings);
-        help1 = findViewById(R.id.help);
-        refer1 = findViewById(R.id.refer);
-        about1 = findViewById(R.id.about);
-        logout1 = findViewById(R.id.logout);
     }
 }

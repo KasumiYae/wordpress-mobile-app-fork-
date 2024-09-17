@@ -12,10 +12,10 @@ import vn.edu.usth.wordpress_mobile_app.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link DraftFragment#newInstance} factory method to
+ * Use the {@link PostDraftFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class DraftFragment extends Fragment {
+public class PostDraftFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class DraftFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public DraftFragment() {
+    public PostDraftFragment() {
         // Required empty public constructor
     }
 
@@ -39,8 +39,8 @@ public class DraftFragment extends Fragment {
      * @return A new instance of fragment DraftFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static DraftFragment newInstance(String param1, String param2) {
-        DraftFragment fragment = new DraftFragment();
+    public static PostDraftFragment newInstance(String param1, String param2) {
+        PostDraftFragment fragment = new PostDraftFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);

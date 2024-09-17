@@ -30,7 +30,11 @@
             android:layout_toEndOf="@+id/ava1"
             android:orientation="vertical">
 
-
+            <TextView
+                android:textColor="@color/gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_8_hours_ago6_days_ago"/>
 
             <TextView
                 android:textColor="@color/black"

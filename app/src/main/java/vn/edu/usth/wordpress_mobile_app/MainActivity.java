@@ -10,13 +10,9 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-import androidx.fragment.app.Fragment;
 
 import vn.edu.usth.wordpress_mobile_app.Account.AccountActivity;
-import vn.edu.usth.wordpress_mobile_app.Account.TitleActivity;
+import vn.edu.usth.wordpress_mobile_app.Account.Blog_SettingActivity;
 import vn.edu.usth.wordpress_mobile_app.Comment.CommentActivity;
 import vn.edu.usth.wordpress_mobile_app.Media.MediaActivity;
 import vn.edu.usth.wordpress_mobile_app.Page.PageActivity;
@@ -89,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, TitleActivity.class);
+                Intent intent = new Intent(MainActivity.this, Blog_SettingActivity.class);
                 startActivity(intent);
             }
         });

@@ -35,6 +35,7 @@ public class PostActivity extends AppCompatActivity {
         ViewPager pager = findViewById(R.id.pager);
         pager.setOffscreenPageLimit(4);
         pager.setAdapter(adapter);
+
         TabLayout tabLayout =findViewById(R.id.tab);
         tabLayout.setupWithViewPager(pager);
 
