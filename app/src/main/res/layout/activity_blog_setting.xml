@@ -7,12 +7,10 @@
     android:orientation="vertical"
     tools:context=".BlogSettings.Blog_SettingActivity">
 
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
+        android:padding="10dp">
 
         <ImageButton
             android:id="@+id/back"
@@ -33,111 +31,165 @@
             android:text="Title"
             android:textSize="25sp"
             android:textStyle="bold" />
-
     </RelativeLayout>
 
 <ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scrollbars="none">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/light_gray"/>
-
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="12dp">
-
-            <TextView
-                android:id="@+id/link_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Adress"
-                android:textColor="@color/gray"/>
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/link_text"
-                android:text="https://abcxyz.wordpress.com"
-                android:textColor="@color/gray"/>
-        </RelativeLayout>
+                android:layout_marginStart="12dp"
+                android:text="General"
+                android:textColor="@color/blue"/>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/light_gray"/>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="12dp"
-            android:background="?attr/selectableItemBackground">
-
-            <TextView
-                android:id="@+id/security_text"
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Privacy" />
+                android:padding="12dp">
 
-            <TextView
-                android:id="@+id/status_text"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/site_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Site Title"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/site_text"
+                    android:text="Title"
+                    android:textColor="@color/gray"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/security_text"
-                android:text="Public"
-                android:textColor="@color/gray"/>
-        </RelativeLayout>
+                android:padding="12dp">
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#E0E0E0"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Tagline"/>
+            </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="12dp"
-            android:background="?attr/selectableItemBackground">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray"/>
 
-            <TextView
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Language" />
-        </RelativeLayout>
+                android:padding="12dp">
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/light_gray"/>
+                <TextView
+                    android:id="@+id/link_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Adress"
+                    android:textColor="@color/gray"/>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="12dp"
-            android:background="?attr/selectableItemBackground">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/link_text"
+                    android:text="https://abcxyz.wordpress.com"
+                    android:textColor="@color/gray"/>
+            </RelativeLayout>
 
-            <TextView
-                android:id="@+id/time_zone_text"
-                android:layout_width="wrap_content"
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Time Zone"/>
+                android:padding="12dp"
+                android:background="?attr/selectableItemBackground">
 
-            <TextView
-                android:id="@+id/zone_text"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/security_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Privacy"/>
+
+                <TextView
+                    android:id="@+id/status_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/security_text"
+                    android:text="Public"
+                    android:textColor="@color/gray"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/time_zone_text"
-                android:text="Ha Noi"
-                android:textColor="@color/gray"/>
-        </RelativeLayout>
+                android:padding="12dp"
+                android:background="?attr/selectableItemBackground">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Language"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:background="?attr/selectableItemBackground">
+
+                <TextView
+                    android:id="@+id/time_zone_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Time Zone"/>
+
+                <TextView
+                    android:id="@+id/zone_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/time_zone_text"
+                    android:text="Ha Noi"
+                    android:textColor="@color/gray"/>
+            </RelativeLayout>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -148,6 +200,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
                 android:text="Home"
                 android:textColor="@color/blue"/>
 
@@ -161,7 +214,8 @@
                     android:id="@+id/setting_home_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Home Setting" />
+                    android:textSize="16sp"
+                    android:text="Home Setting"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -181,6 +235,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
                 android:text="Write"
                 android:textColor="@color/blue"/>
 
@@ -194,6 +249,7 @@
                     android:id="@+id/Default_category_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="16sp"
                     android:text="Default category"/>
 
                 <TextView
@@ -219,7 +275,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Category" />
+                android:textSize="16sp"
+                android:text="Category"/>
         </RelativeLayout>
 
         <View
@@ -236,6 +293,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="16sp"
                 android:text="Tag"/>
         </RelativeLayout>
 
@@ -254,6 +312,7 @@
                 android:id="@+id/Default_post_style_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="16sp"
                 android:text="Default post style"/>
 
             <TextView
@@ -279,7 +338,8 @@
                 android:id="@+id/date_format_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Date format" />
+                android:textSize="16sp"
+                android:text="Date format"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -304,6 +364,7 @@
                 android:id="@+id/time_format_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="16sp"
                 android:text="Time format"/>
 
             <TextView
@@ -329,6 +390,7 @@
                 android:id="@+id/week_start_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="16sp"
                 android:text="Week starts from"/>
 
             <TextView
@@ -353,6 +415,7 @@
                 android:id="@+id/Posts_per_page_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="16sp"
                 android:text="Posts per page"/>
 
             <TextView
@@ -378,6 +441,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="16sp"
                 android:text="Used"
                 android:textColor="@color/gray"/>
 
@@ -407,6 +471,7 @@
                 android:padding="10dp"
                 android:trackTint="@color/blue"
                 android:thumbTint="@color/blue"
+                android:textSize="16sp"
                 android:text="Allow Comments"
                 android:checked="true"
                 tools:ignore="UseSwitchCompatOrMaterialXml" />
@@ -421,6 +486,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
+                android:textSize="16sp"
                 android:text="Allow Respond"
                 android:trackTint="@color/blue"
                 android:thumbTint="@color/blue"
@@ -439,6 +505,7 @@
                 android:padding="10dp"
                 android:trackTint="@color/blue"
                 android:thumbTint="@color/blue"
+                android:textSize="16sp"
                 android:text="Allow Reposted"
                 android:checked="true"
                 tools:ignore="UseSwitchCompatOrMaterialXml" />
@@ -466,6 +533,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="16sp"
                     android:text="Delete empty content"/>
             </RelativeLayout>
 
@@ -483,6 +551,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="16sp"
                     android:text="Export content"/>
             </RelativeLayout>
 
@@ -500,7 +569,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Delete Blog" />
+                    android:textSize="16sp"
+                    android:text="Delete Blog"/>
             </RelativeLayout>
         </LinearLayout>
     </LinearLayout>
