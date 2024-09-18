@@ -39,7 +39,14 @@ public class PageFragment extends Fragment {
                 startActivity(intent);
             }
         });
-
+        gotoPageNews = view.findViewById(R.id.news);
+        gotoPageNews.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), NewsActivity.class);
+                startActivity(intent);
+            }
+        });
         return view;
     }
 }
