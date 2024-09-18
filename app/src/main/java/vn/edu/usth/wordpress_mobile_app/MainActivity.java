@@ -20,7 +20,7 @@ import vn.edu.usth.wordpress_mobile_app.Post.PostActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ImageButton siteIconButton;
+    private ImageButton siteIconButton, downButton;
     private TextView titleTextView, linkTextView;
     private ImageView postIcon, pageIcon, mediaIcon, commentIcon, profileIcon, settingIcon, wordpressIcon;
     private ImageView plusButton;
@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main2);
         siteIconButton = findViewById(R.id.site_icon);
+        downButton = findViewById(R.id.down);
         titleTextView = findViewById(R.id.title);
         linkTextView = findViewById(R.id.link);
         post = findViewById(R.id.post_item);
@@ -86,6 +87,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, Blog_SettingActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        downButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,BlogOptionActivity.class );
                 startActivity(intent);
             }
         });
