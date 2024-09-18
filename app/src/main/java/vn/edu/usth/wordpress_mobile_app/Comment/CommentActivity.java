@@ -28,7 +28,7 @@ public class CommentActivity extends AppCompatActivity {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
 
         ViewPager pager = findViewById(R.id.View_pager);
-        pager.setOffscreenPageLimit(4);
+        pager.setOffscreenPageLimit(7);
         pager.setAdapter(adapter);
 
         TabLayout tabLayout =findViewById(R.id.tabLayout);
