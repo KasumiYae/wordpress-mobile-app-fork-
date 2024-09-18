@@ -45,9 +45,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:paddingBottom="10dp"
-            android:text="Your homepage is using a Theme template and will open in the web eidtor." />
+            android:text="@string/infohomepage" />
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
@@ -90,8 +90,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="10dp"
-            android:textSize="15dp"
-            android:text="3 days ago" />
+            android:textSize="15sp"
+            android:text="@string/days" />
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
@@ -136,8 +136,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="10dp"
-            android:textSize="15dp"
-            android:text="3 days ago" />
+            android:textSize="15sp"
+            android:text="@string/days" />
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"

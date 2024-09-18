@@ -97,4 +97,8 @@
     <string name="contribute">Contribute</string>
     <string name="wordpress">WordPress</string>
     <string name="version_25_2_1_1444">version_25_2_1 (1444)</string>
+    <string name="update">Update</string>
+    <string name="introductiontext">Introduction</string>
+    <string name="infohomepage">Your homepage is using a Theme template and will open in the web eidtor.</string>
+    <string name="days">3 days ago</string>
 </resources>
