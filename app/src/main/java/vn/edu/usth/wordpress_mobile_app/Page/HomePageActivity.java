@@ -28,6 +28,5 @@ public class HomePageActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
 }

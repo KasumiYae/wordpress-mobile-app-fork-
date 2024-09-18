@@ -31,6 +31,15 @@ public class PageFragment extends Fragment {
                 startActivity(intent);
             }
         });
+        gotoPageIntroduction = view.findViewById(R.id.introduction);
+        gotoPageIntroduction.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), IntroductionActivity.class);
+                startActivity(intent);
+            }
+        });
+
         return view;
     }
 }
