@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Account.Blog_SettingActivity">
+    tools:context=".BlogSettings.Blog_SettingActivity">
 
 
     <RelativeLayout
@@ -85,7 +85,7 @@
                 android:id="@+id/security_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Security" />
+                android:text="Privacy" />
 
             <TextView
                 android:id="@+id/status_text"
@@ -414,7 +414,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#E0E0E0"/>
+                android:background="@color/light_gray"/>
 
             <Switch
                 android:id="@+id/allow_Respond_switch"
@@ -430,7 +430,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#E0E0E0"/>
+                android:background="@color/light_gray"/>
 
             <Switch
                 android:id="@+id/allow_repost_switch"

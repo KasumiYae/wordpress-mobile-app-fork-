@@ -13,16 +13,31 @@
         android:theme="@style/Theme.Wordpressmobileapp"
         tools:targetApi="31">
         <activity
+            android:name=".Account.AboutActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Account.HelpActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Account.AppSettingsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Account.AccountSettingsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Account.MyProfileActivity"
+            android:exported="true" />
+        <activity
             android:name=".BlogOptionActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Page.IntroductionActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Page.HomePageActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
-            android:name=".Account.Blog_SettingActivity"
+            android:name=".BlogSettings.Blog_SettingActivity"
             android:exported="true" />
         <activity
             android:name=".Media.MediaActivity"

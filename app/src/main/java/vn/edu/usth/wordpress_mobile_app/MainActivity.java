@@ -12,7 +12,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 import vn.edu.usth.wordpress_mobile_app.Account.AccountActivity;
-import vn.edu.usth.wordpress_mobile_app.Account.Blog_SettingActivity;
+import vn.edu.usth.wordpress_mobile_app.BlogSettings.Blog_SettingActivity;
 import vn.edu.usth.wordpress_mobile_app.Comment.CommentActivity;
 import vn.edu.usth.wordpress_mobile_app.Media.MediaActivity;
 import vn.edu.usth.wordpress_mobile_app.Page.PageActivity;

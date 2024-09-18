@@ -124,7 +124,7 @@
             android:layout_height="wrap_content"
             android:layout_toEndOf="@+id/page_icon"
             android:layout_centerVertical="true"
-            android:text="Page"/>
+            android:text="Pages"/>
     </RelativeLayout>
 
     <RelativeLayout

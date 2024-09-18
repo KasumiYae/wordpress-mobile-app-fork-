@@ -72,7 +72,7 @@
                     android:id="@+id/name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Alexander the Great"
+                    android:text="@string/khiem_pham"
                     android:textColor="@color/black"
                     android:textSize="25sp"
                     android:textStyle="bold" />
@@ -81,12 +81,13 @@
                     android:id="@+id/username"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="\banhmibunrieu.wordpress.com"
+                    android:text="@string/phamduckhiem03"
                     android:textColor="@color/gray" />
             </LinearLayout>
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/my_profile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="16dp"
@@ -116,6 +117,7 @@
             android:background="@color/light_gray"/>
 
         <RelativeLayout
+            android:id="@+id/account_settings"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="16dp"
@@ -145,6 +147,7 @@
             android:background="@color/light_gray"/>
 
         <RelativeLayout
+            android:id="@+id/app_settings"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="16dp"
@@ -160,7 +163,7 @@
                 android:contentDescription="App Settings Icon" />
 
             <TextView
-                android:id="@+id/app_settings"
+                android:id="@+id/app_settings_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@+id/phone_icon"
@@ -174,6 +177,7 @@
             android:background="@color/light_gray"/>
 
         <RelativeLayout
+            android:id="@+id/help"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="16dp"
@@ -232,6 +236,7 @@
             android:background="@color/light_gray"/>
 
         <RelativeLayout
+            android:id="@+id/about_wordpress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="16dp"
