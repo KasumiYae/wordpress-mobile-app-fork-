@@ -101,4 +101,6 @@
     <string name="introductiontext">Introduction</string>
     <string name="infohomepage">Your homepage is using a Theme template and will open in the web eidtor.</string>
     <string name="days">3 days ago</string>
+    <string name="create_page">Create page</string>
+    <string name="empty">Empty</string>
 </resources>
