@@ -25,13 +25,6 @@ public class Blog_SettingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blog_setting);
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.Blog_setting), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-
-
         btnback = findViewById(R.id.back);
         btnback.setOnClickListener(new View.OnClickListener() {
             @Override

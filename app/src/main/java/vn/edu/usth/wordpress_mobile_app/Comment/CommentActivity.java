@@ -35,13 +35,6 @@ public class CommentActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(pager);
 
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.comment_layout), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-
-
         ImageView backIcon = findViewById(R.id.back);
         backIcon.setOnClickListener(new View.OnClickListener() {
             @Override

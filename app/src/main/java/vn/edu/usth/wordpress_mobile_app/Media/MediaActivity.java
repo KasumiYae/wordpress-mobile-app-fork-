@@ -25,11 +25,6 @@ public class MediaActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_media);
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.media_layout), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(
                 getSupportFragmentManager());
