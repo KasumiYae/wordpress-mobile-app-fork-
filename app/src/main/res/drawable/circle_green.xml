@@ -3,4 +3,6 @@
     <solid android:color="@color/green" /> <!-- Green color -->
     <size android:width="60dp" android:height="60dp" />
     <corners android:radius="30dp" />
+    <stroke android:color="@color/white" android:width="4dp" />
+
 </shape>
