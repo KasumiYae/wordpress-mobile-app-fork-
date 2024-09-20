@@ -45,7 +45,7 @@
                 android:text="@string/Khanh2"/>
 
             <TextView
-                android:textColor="@color/gray"
+                android:textColor="@color/blue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
