@@ -24,6 +24,11 @@ public class CommentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_comment);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.comment_layout), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
 
