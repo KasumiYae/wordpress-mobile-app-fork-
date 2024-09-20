@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".Page.RecycleFragment">
 
     <RelativeLayout
@@ -11,14 +10,13 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:layout_width="130dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:gravity="center"
-            android:background="@color/white"
             android:text="@string/empty"
-            android:textSize="20sp"
-            android:textColor="@color/black" />
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/light_gray" />
     </RelativeLayout>
 
 
