@@ -1,19 +1,14 @@
 const express = require('express');
 
 const app = express();
+const postRouter = require("./routes/post")
+const commentRouter = require("./routes/comment")
+const pageRouter = require("./routes/page")
 
-app.use(express.json())
 
-app.get('/post', (req, res) => {
-  // res.send('Successfull response.');
-  res.status(200).send({
-    id: "1",
-    title: "hello",
-    date:"123",
-    content: "anbdiniolnwdioniwos",
-    cate: "posted"
-  })
-});
+app.use('/post', postRouter);
+app.use('/comment', commentRouter);
+app.use('/page', pageRouter);
 
 
 app.listen(3000, () => console.log('Example app is listening on port 3000.'));
