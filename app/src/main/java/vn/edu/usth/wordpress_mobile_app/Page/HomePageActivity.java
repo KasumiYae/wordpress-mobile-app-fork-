@@ -44,7 +44,7 @@ public class HomePageActivity extends AppCompatActivity {
         });
 
         requestQueue = Volley.newRequestQueue(HomePageActivity.this);
-        String url = "https://192.168.58.87:3000/post";
+        String url = "http://192.168.1.4:3000/post";
 
 
         tv_data = findViewById(R.id.tv_data);
@@ -60,7 +60,7 @@ public class HomePageActivity extends AppCompatActivity {
                     throw new RuntimeException(e);
                 }
 
-                Toast.makeText(HomePageActivity.this, "CallApiDone", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(HomePageActivity.this, "CallApiDone", Toast.LENGTH_SHORT).show();
             }
         }, new Response.ErrorListener() {
             @Override
