@@ -2,11 +2,17 @@ package vn.edu.usth.wordpress_mobile_app.Post;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import vn.edu.usth.wordpress_mobile_app.R;
 
@@ -58,9 +64,26 @@ public class TrashFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        List<PostItemDetail> PostList = new ArrayList<>();
+        PostList.add(new PostItemDetail("January 1, 2024", "Hello World1", "Hello World1"));
+        PostList.add(new PostItemDetail("January 2, 2024", "Hello World2", "Hello World2"));
+        PostList.add(new PostItemDetail("January 3, 2024", "Hello World3", "Hello World3"));
+        PostList.add(new PostItemDetail("January 4, 2024", "Hello World4", "Hello World4"));
+        PostList.add(new PostItemDetail("January 5, 2024", "Hello World5", "Hello World5"));
+        PostList.add(new PostItemDetail("January 6, 2024", "Hello World6", "Hello World6"));
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.post_fragment_trash, container, false);
+        View view = inflater.inflate(R.layout.post_fragment_trash, container, false);
+        RecyclerView recyclerView = view.findViewById(R.id.trash_rv);
+        if (recyclerView == null) {
+            throw new RuntimeException("RecyclerView not found in fragment_approved layout.");
+        }
+
+        RecyclerAdapter recyclerAdapter = new RecyclerAdapter(PostList);
+        recyclerView.setAdapter(recyclerAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        return view;
     }
 }
