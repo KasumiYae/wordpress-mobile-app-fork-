@@ -23,7 +23,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
             case 1: return new pending();
             case 2: return new Unanswered();
             case 3: return new replied();
-            case 4: return new Unanswered();
+            case 4: return new Approved();
             case 5: return new Spam();
             case 6: return new Bin();
             default: return new All();

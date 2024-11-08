@@ -22,6 +22,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -44,7 +45,7 @@ public class HomePageActivity extends AppCompatActivity {
         });
 
         requestQueue = Volley.newRequestQueue(HomePageActivity.this);
-        String url = "http://192.168.1.4:3000/post";
+        String url = "http://192.168.1.36:3000/post";
 
 
         tv_data = findViewById(R.id.tv_data);
@@ -52,9 +53,16 @@ public class HomePageActivity extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 try {
-                    JSONObject obj = new JSONObject(response);
-                    String name = obj.getString("content");
-                    tv_data.setText(name);
+                    String text="";
+                    for (int i = 0; i < 2; i++) {
+                        JSONArray arr = new JSONArray(response);
+                        String name = arr.getString(i);
+                        JSONObject obj = new JSONObject(name);
+                        String lol = obj.getString("content");
+                        text = text + lol;
+                        tv_data.setText(text);
+                    }
+
 
                 } catch (JSONException e) {
                     throw new RuntimeException(e);
