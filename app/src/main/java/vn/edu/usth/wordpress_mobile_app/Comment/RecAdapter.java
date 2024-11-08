@@ -40,7 +40,7 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.RecViewAdapter> 
         return cmtlist.size();
     }
 
-    class RecViewAdapter  extends RecyclerView.ViewHolder{
+    public class RecViewAdapter  extends RecyclerView.ViewHolder{
         private CardView cardView;
         private TextView nameId;
         private TextView dateId;
