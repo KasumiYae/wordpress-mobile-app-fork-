@@ -6,7 +6,15 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import vn.edu.usth.wordpress_mobile_app.Comment.Comment;
+import vn.edu.usth.wordpress_mobile_app.Media.RecAdapter;
 import vn.edu.usth.wordpress_mobile_app.R;
 
 /**
@@ -60,6 +68,27 @@ public class AllFrag extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.media_fragment_all, container, false);
+        View rootView = inflater.inflate(R.layout.media_fragment_all, container, false);
+
+        // Find RecyclerView and ensure it matches the ID in XML layout
+        RecyclerView recyclerView = rootView.findViewById(R.id.recViewMedia);
+        if (recyclerView == null) {
+            throw new RuntimeException("RecyclerView not found in fragment_approved layout.");
+        }
+
+        // Populate the comment list with sample data
+        List<Media> mediaList = new ArrayList<>();
+        mediaList.add(new Media(R.drawable.cat1));
+        mediaList.add(new Media(R.drawable.cat1));
+        mediaList.add(new Media(R.drawable.cat1));
+        mediaList.add(new Media(R.drawable.cat1));
+        mediaList.add(new Media(R.drawable.cat1));
+
+        // Set up the adapter and layout manager for RecyclerView
+        RecAdapter recAdapter = new RecAdapter(mediaList);
+        recyclerView.setAdapter(recAdapter);
+        recyclerView.setLayoutManager(new GridLayoutManager(getContext(),3));
+
+        return rootView;
     }
 }
