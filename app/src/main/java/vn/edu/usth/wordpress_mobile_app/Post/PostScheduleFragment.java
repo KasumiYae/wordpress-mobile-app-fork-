@@ -11,6 +11,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -63,27 +74,72 @@ public class PostScheduleFragment extends Fragment {
         }
     }
 
+
+    private RequestQueue requestQueue;
+    private List<PostItemDetail> postList;
+    private RecyclerAdapter recyclerAdapter;
+    private RecyclerView recyclerView;
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        List<PostItemDetail> PostList = new ArrayList<>();
-        PostList.add(new PostItemDetail("January 1, 2024", "Hello World1", "Hello World1"));
-        PostList.add(new PostItemDetail("January 2, 2024", "Hello World2", "Hello World2"));
-        PostList.add(new PostItemDetail("January 3, 2024", "Hello World3", "Hello World3"));
-        PostList.add(new PostItemDetail("January 4, 2024", "Hello World4", "Hello World4"));
-        PostList.add(new PostItemDetail("January 5, 2024", "Hello World5", "Hello World5"));
-        PostList.add(new PostItemDetail("January 6, 2024", "Hello World6", "Hello World6"));
-
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.post_fragment_schedule, container, false);
-        RecyclerView recyclerView = view.findViewById(R.id.schedule_rv);
+        recyclerView = view.findViewById(R.id.schedule_rv);
+
         if (recyclerView == null) {
             throw new RuntimeException("RecyclerView not found in fragment_approved layout.");
         }
 
-        RecyclerAdapter recyclerAdapter = new RecyclerAdapter(PostList);
+        // Initialize comment list and adapter
+        postList = new ArrayList<>();
+        recyclerAdapter = new RecyclerAdapter(postList);
         recyclerView.setAdapter(recyclerAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+        // Set up the Volley request queue
+        requestQueue = Volley.newRequestQueue(requireContext());
+        fetchPosts();
+
         return view;
+    }
+
+    private void fetchPosts() {
+        String url = "http://192.168.1.36:3000/post";  // Replace with your actual URL
+
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    // Parse JSON array response
+                    JSONArray jsonArray = new JSONArray(response);
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        JSONObject obj = jsonArray.getJSONObject(i);
+                        String cate = obj.getString("cate");
+                        if(cate.equals("schedule")){
+                            String date = obj.getString("date");  // Adjust field names as needed
+                            String title = obj.getString("title");
+                            String content = obj.getString("content");
+                            // Add new comment to list
+                            postList.add(new PostItemDetail(date, title, content));
+                        }
+                    }
+
+                    // Notify adapter about data change
+                    recyclerAdapter.notifyDataSetChanged();
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();  // Handle the error here (e.g., show a message to the user)
+            }
+        });
+
+        // Add the request to the RequestQueue
+        requestQueue.add(stringRequest);
     }
 }
