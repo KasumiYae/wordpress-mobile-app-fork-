@@ -6,14 +6,35 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import vn.edu.usth.wordpress_mobile_app.R;
 
 public class replied extends Fragment {
+    private RequestQueue requestQueue;
+    private List<Comment> cmtList;
+    private RecAdapter recAdapter;
+    private RecyclerView recyclerView;
+    private TextView tv_data;
 
     @Nullable
     @Override
@@ -22,24 +43,62 @@ public class replied extends Fragment {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_comments_replied, container, false);
 
-        // Find RecyclerView and ensure it matches the ID in XML layout
-        RecyclerView recyclerView = rootView.findViewById(R.id.recView);
+        // Initialize RecyclerView
+        recyclerView = rootView.findViewById(R.id.recView);
         if (recyclerView == null) {
             throw new RuntimeException("RecyclerView not found in fragment_approved layout.");
         }
 
-        // Populate the comment list with sample data
-        List<Comment> cmtList = new ArrayList<>();
-        cmtList.add(new Comment("111", "222", "333"));
-        cmtList.add(new Comment("2111", "222", "333"));
-        cmtList.add(new Comment("3111", "222", "333"));
-        cmtList.add(new Comment("4111", "222", "333"));
-
-        // Set up the adapter and layout manager for RecyclerView
-        RecAdapter recAdapter = new RecAdapter(cmtList);
+        // Initialize comment list and adapter
+        cmtList = new ArrayList<>();
+        recAdapter = new RecAdapter(cmtList);
         recyclerView.setAdapter(recAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
+        // Set up the Volley request queue
+        requestQueue = Volley.newRequestQueue(requireContext());
+        fetchComments();
+
         return rootView;
+    }
+
+    private void fetchComments() {
+        String url = "http://192.168.1.36:3000/comment";  // Replace with your actual URL
+
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    // Parse JSON array response
+                    JSONArray jsonArray = new JSONArray(response);
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        JSONObject obj = jsonArray.getJSONObject(i);
+                        String cate = obj.getString("cate");
+                        if (cate.equals("replied")){
+                            String date = obj.getString("date");  // Adjust field names as needed
+                            String author = obj.getString("username");
+                            String content = obj.getString("content");
+                            // Add new comment to list
+                            cmtList.add(new Comment(author, date, content));
+                        }
+
+                    }
+
+                    // Notify adapter about data change
+                    recAdapter.notifyDataSetChanged();
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();  // Handle the error here (e.g., show a message to the user)
+            }
+        });
+
+        // Add the request to the RequestQueue
+        requestQueue.add(stringRequest);
     }
 }
