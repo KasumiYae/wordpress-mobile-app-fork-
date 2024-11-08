@@ -14,6 +14,8 @@ import java.util.List;
 
 import vn.edu.usth.wordpress_mobile_app.Comment.Comment;
 import vn.edu.usth.wordpress_mobile_app.R;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 public class RecAdapter extends RecyclerView.Adapter<RecAdapter.RecViewAdapter> {
     List<Media> medialist;
@@ -32,7 +34,9 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.RecViewAdapter> 
     @Override
     public void onBindViewHolder(@NonNull RecViewAdapter holder, int position) {
         Media m = medialist.get(position);
-        holder.imageView1.setImageResource(m.getId());
+        Glide.with(holder.imageView1.getContext())
+                .load(m.getId())
+                .into(holder.imageView1);
     }
 
     @Override
