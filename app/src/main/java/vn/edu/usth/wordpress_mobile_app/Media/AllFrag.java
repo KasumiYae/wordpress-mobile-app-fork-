@@ -31,7 +31,7 @@ import vn.edu.usth.wordpress_mobile_app.R;
 public class AllFrag extends Fragment {
 
     private static final String TAG = "PicsFrag";
-    private static final String IMAGE_URL = "http://192.168.1.36:3000/media/images/";
+    private static final String IMAGE_URL = "http://222.252.124.98:3000/media/images/";
 
     private List<Media> mediaList;
     private RecAdapter recAdapter;

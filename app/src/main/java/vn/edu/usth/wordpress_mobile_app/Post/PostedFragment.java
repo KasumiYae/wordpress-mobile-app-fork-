@@ -102,7 +102,7 @@ public class PostedFragment extends Fragment {
     }
 
     private void fetchPosts() {
-        String url = "http://192.168.1.36:3000/post";  // Replace with your actual URL
+        String url = "http://222.252.124.98:3000/post";  // Replace with your actual URL
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override

@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
         profile = findViewById(R.id.profile_item);
         setting = findViewById(R.id.setting_item);
         wordpressIcon = findViewById(R.id.wordpress_icon);
-        plusButton = findViewById(R.id.fab);
 
         post.setOnClickListener(new View.OnClickListener() {
             @Override

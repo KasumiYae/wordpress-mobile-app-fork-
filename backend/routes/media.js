@@ -7,7 +7,7 @@ rout.use(express.static('/img'));
 
 // Route to generate a list of image URLs
 rout.get('/images', (req, res) => {
-    const baseUrl = `http://192.168.1.36:3000/media`; // Base URL for images
+    const baseUrl = `http://222.252.124.98:3000/media`; // Base URL for images
     const images = [];
 
     // Generate URLs for images from 12.png to 21.png

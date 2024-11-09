@@ -63,14 +63,20 @@ public class All extends Fragment {
     }
 
     private void fetchComments() {
-        String url = "http://192.168.1.36:3000/comment";  // Replace with your actual URL
+        String url = "http://222.252.124.98:3000/comment";  // Replace with your actual URL
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try {
-                    // Parse JSON array response
                     JSONArray jsonArray = new JSONArray(response);
+//                    JSONObject obj = jsonArray.getJSONObject(2);
+//                    String date = obj.getString("date");
+//                    String name = obj.getString("username");
+//                    String cmt = obj.getString("content");
+//                    cmtList.add(new Comment(name,date,cmt));
+
+
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject obj = jsonArray.getJSONObject(i);
                         String date = obj.getString("date");  // Adjust field names as needed
